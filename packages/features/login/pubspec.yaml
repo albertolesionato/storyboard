@@ -1,5 +1,5 @@
-name: repo
-description: A new Flutter project.
+name: login
+description: A new Flutter package project.
 version: 0.0.1
 homepage:
 
@@ -10,6 +10,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  equatable: ^2.0.5
+  form_fields:
+    path: ../../form_fields
 
 dev_dependencies:
   flutter_test:
