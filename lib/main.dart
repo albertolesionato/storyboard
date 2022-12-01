@@ -13,7 +13,7 @@ void main() {
   runApp(const App());
 }
 
-final _router = GoRouter(initialLocation: '/sign-in', routes: [
+final _router = GoRouter(initialLocation: '/home', routes: [
   ShellRoute(
       builder: (context, state, child) {
         return Home(child: child);
