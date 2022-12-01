@@ -1,0 +1,10 @@
+{
+    "appBarTitle": "Sign In",
+    "usernameTextFieldLabel": "Username",
+    "passwordTextFieldLabel": "Password",
+    "forgotMyPasswordButtonLabel": "Forgot my password",
+    "signInButtonLabel": "Sign In",
+    "signUpOpeningText": "Don't have an account?",
+    "signUpButtonLabel": "Sign up",
+    "invalidCredentialsErrorMessage": "Invalid email and/or password"
+}

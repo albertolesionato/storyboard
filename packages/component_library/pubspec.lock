@@ -36,13 +36,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.16.0"
-  equatable:
-    dependency: "direct main"
-    description:
-      name: equatable
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.5"
   fake_async:
     dependency: transitive
     description:
@@ -67,20 +60,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  form_fields:
-    dependency: "direct main"
-    description:
-      path: "../../form_fields"
-      relative: true
-    source: path
-    version: "0.0.1"
-  formz:
-    dependency: transitive
-    description:
-      name: formz
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.1"
   lints:
     dependency: transitive
     description:

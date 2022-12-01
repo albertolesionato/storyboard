@@ -1,0 +1,10 @@
+{
+    "appBarTitle": "تسجيل الدخول",
+    "usernameTextFieldLabel": "اسم المستخدم",
+    "passwordTextFieldLabel": "كلمة المرور",
+    "forgotMyPasswordButtonLabel": "نسيت كملة المرور",
+    "signInButtonLabel": "تسجيل الدخول",
+    "signUpOpeningText": "لا يوجد لديك حساب؟",
+    "signUpButtonLabel": "إنشاء حساب",
+    "invalidCredentialsErrorMessage": "خطأ في البريد الألكتروني او كلمة المرور"
+}

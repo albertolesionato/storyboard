@@ -33,10 +33,14 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   go_router: ^5.2.0
   flutter_bloc: ^8.1.1
-  login:
-    path: packages/features/login
+  sign_in:
+    path: packages/features/sign_in
+  user_repository:
+    path: packages/user_repository
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

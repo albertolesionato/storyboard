@@ -1,0 +1,29 @@
+name: sign_in
+publish_to: none
+
+environment:
+  sdk: '>=2.18.5 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  equatable: ^2.0.5
+  flutter_bloc: ^8.1.1
+  form_fields:
+    path: ../../form_fields
+  user_repository:
+    path: ../../user_repository
+  component_library:
+    path: ../../component_library
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  generate: true

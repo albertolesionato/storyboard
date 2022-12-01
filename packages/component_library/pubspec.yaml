@@ -1,4 +1,4 @@
-name: form_fields
+name: component_library
 publish_to: none
 
 environment:
@@ -8,8 +8,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  equatable: ^2.0.5
-  formz: ^0.4.1
 
 dev_dependencies:
   flutter_test:

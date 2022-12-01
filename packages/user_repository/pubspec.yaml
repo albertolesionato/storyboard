@@ -1,7 +1,5 @@
-name: login
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+name: user_repository
+publish_to: none
 
 environment:
   sdk: '>=2.18.5 <3.0.0'
@@ -10,9 +8,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  equatable: ^2.0.5
-  form_fields:
-    path: ../../form_fields
 
 dev_dependencies:
   flutter_test:

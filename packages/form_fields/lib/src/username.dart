@@ -7,9 +7,8 @@ class Username extends FormzInput<String, UsernameValidationError>
       : isAlreadyTaken = false,
         super.pure(value);
 
-  const Username.validated(String value)
-      : isAlreadyTaken = false,
-        super.dirty(value);
+  const Username.validated(String value, {this.isAlreadyTaken = false})
+      : super.dirty(value);
 
   final bool isAlreadyTaken;
 
@@ -24,7 +23,7 @@ class Username extends FormzInput<String, UsernameValidationError>
     if (isAlreadyTaken) {
       return UsernameValidationError.alreadyTaken;
     }
-    if (value.length < 8) {
+    if (value.length < 8 || value.length > 120) {
       return UsernameValidationError.invalid;
     }
     return null;
