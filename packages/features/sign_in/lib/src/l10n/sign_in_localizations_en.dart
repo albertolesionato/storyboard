@@ -26,5 +26,20 @@ class SignInLocalizationsEn extends SignInLocalizations {
   String get signUpButtonLabel => 'Sign up';
 
   @override
-  String get invalidCredentialsErrorMessage => 'Invalid email and/or password';
+  String get invalidCredentialsErrorMessage => 'Invalid email and/or password.';
+
+  @override
+  String get usernameTextFieldEmptyErrorMessage => 'Your username can\'t be empty.';
+
+  @override
+  String get usernameTextFieldInvalidErrorMessage => 'This username is not valid.';
+
+  @override
+  String get usernameTextFieldAlreadyRegisteredErrorMessage => 'This username is already registered.';
+
+  @override
+  String get passwordTextFieldEmptyErrorMessage => 'Your password can\'t be empty.';
+
+  @override
+  String get passwordTextFieldInvalidErrorMessage => 'Password must be at least five characters long.';
 }

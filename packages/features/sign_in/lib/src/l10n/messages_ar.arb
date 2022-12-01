@@ -6,5 +6,10 @@
     "signInButtonLabel": "تسجيل الدخول",
     "signUpOpeningText": "لا يوجد لديك حساب؟",
     "signUpButtonLabel": "إنشاء حساب",
-    "invalidCredentialsErrorMessage": "خطأ في البريد الألكتروني او كلمة المرور"
+    "invalidCredentialsErrorMessage": ".خطأ في البريد الألكتروني او كلمة المرور",
+    "usernameTextFieldEmptyErrorMessage": ".اسم المستخدم مطلوب",
+    "usernameTextFieldInvalidErrorMessage": ".اسم المستخدم غير صالح",
+    "usernameTextFieldAlreadyRegisteredErrorMessage": ".اسم المستخدم مسجل غير متوفر",
+    "passwordTextFieldEmptyErrorMessage": ".كلمة المرور مطلوبة",
+    "passwordTextFieldInvalidErrorMessage": ".يجب أن تتكون كلمة المرور من 8 رموز على الأقل"
 }

@@ -2,6 +2,7 @@ import 'package:component_library/component_library.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:form_fields/form_fields.dart';
 import 'package:user_repository/user_repository.dart';
 
 import '../sign_in.dart';
@@ -107,7 +108,7 @@ class _SignInFormState extends State<_SignInForm> {
     });
     _passwordFocusNode.addListener(() {
       if (!_passwordFocusNode.hasFocus) {
-        cubit.onUsernameUnfocused();
+        cubit.onPasswordUnfocused();
       }
     });
   }
@@ -128,7 +129,11 @@ class _SignInFormState extends State<_SignInForm> {
         return;
       }
 
-      if (state.submissionStatus.hasSubmissionError) {
+      final hasSubmissionError = state.submissionStatus ==
+              SubmissionStatus.genericError ||
+          state.submissionStatus == SubmissionStatus.invalidCredentialsError;
+
+      if (hasSubmissionError) {
         ScaffoldMessenger.of(context)
           ..hideCurrentSnackBar()
           ..showSnackBar(
@@ -140,28 +145,70 @@ class _SignInFormState extends State<_SignInForm> {
           );
       }
     }, builder: (context, state) {
+      final usernameError =
+          state.username.invalid ? state.username.error : null;
+      final passwordError =
+          state.password.invalid ? state.password.error : null;
+      final isSubmissionInProgress =
+          state.submissionStatus == SubmissionStatus.inProgress;
+
+      final cubit = context.read<SignInCubit>();
       return Column(
         children: [
           TextField(
+            focusNode: _userFocusNode,
+            onChanged: cubit.onUsernameChanged,
             textInputAction: TextInputAction.next,
             autofocus: false,
             decoration: InputDecoration(
                 suffixIcon: const Icon(Icons.person),
-                labelText: l10n.usernameTextFieldLabel),
+                labelText: l10n.usernameTextFieldLabel,
+                enabled: !isSubmissionInProgress,
+                errorText: usernameError == null
+                    ? null
+                    : (usernameError == UsernameValidationError.empty
+                        ? l10n.usernameTextFieldEmptyErrorMessage
+                        : l10n.usernameTextFieldInvalidErrorMessage)),
           ),
           const SizedBox(height: Spacing.large),
           TextField(
+            focusNode: _passwordFocusNode,
+            onChanged: cubit.onPasswordChanged,
+            obscureText: true,
+            onEditingComplete: cubit.onSubmit,
             decoration: InputDecoration(
                 suffixIcon: const Icon(Icons.password),
-                labelText: l10n.passwordTextFieldLabel),
+                enabled: !isSubmissionInProgress,
+                labelText: l10n.passwordTextFieldLabel,
+                errorText: passwordError == null
+                    ? null
+                    : (passwordError == PasswordValidationError.empty
+                        ? l10n.passwordTextFieldEmptyErrorMessage
+                        : l10n.passwordTextFieldInvalidErrorMessage)),
           ),
           TextButton(
-              onPressed: () {}, child: Text(l10n.forgotMyPasswordButtonLabel)),
+              onPressed:
+                  isSubmissionInProgress ? null : widget.onForgotMyPasswordTap,
+              child: Text(l10n.forgotMyPasswordButtonLabel)),
           const SizedBox(height: Spacing.small),
-          ExpandedElevatedButton(label: l10n.signInButtonLabel),
-          const SizedBox(height: Spacing.xxxLarge),
-          Text(l10n.signUpOpeningText),
-          TextButton(onPressed: () {}, child: Text(l10n.signUpButtonLabel))
+          isSubmissionInProgress
+              ? ExpandedElevatedButton.inProgress(label: l10n.signInButtonLabel)
+              : ExpandedElevatedButton(
+                  label: l10n.signInButtonLabel,
+                  onTap: cubit.onSubmit,
+                  icon: const Icon(
+                    Icons.login,
+                  ),
+                ),
+          const SizedBox(
+            height: Spacing.xxxLarge,
+          ),
+          Text(
+            l10n.signUpOpeningText,
+          ),
+          TextButton(
+              onPressed: isSubmissionInProgress ? null : widget.onSignUpTap,
+              child: Text(l10n.signUpButtonLabel))
         ],
       );
     });

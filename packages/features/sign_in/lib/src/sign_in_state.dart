@@ -30,9 +30,5 @@ enum SubmissionStatus {
   inProgress,
   success,
   genericError,
-  invalidCredentialsError;
-
-  bool get hasSubmissionError =>
-      this == SubmissionStatus.genericError ||
-      this == SubmissionStatus.invalidCredentialsError;
+  invalidCredentialsError,
 }

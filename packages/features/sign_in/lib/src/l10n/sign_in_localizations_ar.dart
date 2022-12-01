@@ -26,5 +26,20 @@ class SignInLocalizationsAr extends SignInLocalizations {
   String get signUpButtonLabel => 'إنشاء حساب';
 
   @override
-  String get invalidCredentialsErrorMessage => 'خطأ في البريد الألكتروني او كلمة المرور';
+  String get invalidCredentialsErrorMessage => '.خطأ في البريد الألكتروني او كلمة المرور';
+
+  @override
+  String get usernameTextFieldEmptyErrorMessage => '.اسم المستخدم مطلوب';
+
+  @override
+  String get usernameTextFieldInvalidErrorMessage => '.اسم المستخدم غير صالح';
+
+  @override
+  String get usernameTextFieldAlreadyRegisteredErrorMessage => '.اسم المستخدم مسجل غير متوفر';
+
+  @override
+  String get passwordTextFieldEmptyErrorMessage => '.كلمة المرور مطلوبة';
+
+  @override
+  String get passwordTextFieldInvalidErrorMessage => '.يجب أن تتكون كلمة المرور من 8 رموز على الأقل';
 }

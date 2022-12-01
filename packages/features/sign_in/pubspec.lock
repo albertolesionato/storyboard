@@ -50,6 +50,13 @@ packages:
       relative: true
     source: path
     version: "0.0.0"
+  domain_models:
+    dependency: "direct main"
+    description:
+      path: "../../domain_models"
+      relative: true
+    source: path
+    version: "0.0.0"
   equatable:
     dependency: "direct main"
     description:

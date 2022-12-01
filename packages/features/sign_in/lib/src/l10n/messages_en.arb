@@ -6,5 +6,10 @@
     "signInButtonLabel": "Sign In",
     "signUpOpeningText": "Don't have an account?",
     "signUpButtonLabel": "Sign up",
-    "invalidCredentialsErrorMessage": "Invalid email and/or password"
+    "invalidCredentialsErrorMessage": "Invalid email and/or password.",
+    "usernameTextFieldEmptyErrorMessage": "Your username can't be empty.",
+    "usernameTextFieldInvalidErrorMessage": "This username is not valid.",
+    "usernameTextFieldAlreadyRegisteredErrorMessage": "This username is already registered.",
+    "passwordTextFieldEmptyErrorMessage": "Your password can't be empty.",
+    "passwordTextFieldInvalidErrorMessage": "Password must be at least five characters long."
 }

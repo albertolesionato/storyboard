@@ -138,8 +138,38 @@ abstract class SignInLocalizations {
   /// No description provided for @invalidCredentialsErrorMessage.
   ///
   /// In en, this message translates to:
-  /// **'Invalid email and/or password'**
+  /// **'Invalid email and/or password.'**
   String get invalidCredentialsErrorMessage;
+
+  /// No description provided for @usernameTextFieldEmptyErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your username can\'t be empty.'**
+  String get usernameTextFieldEmptyErrorMessage;
+
+  /// No description provided for @usernameTextFieldInvalidErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This username is not valid.'**
+  String get usernameTextFieldInvalidErrorMessage;
+
+  /// No description provided for @usernameTextFieldAlreadyRegisteredErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'This username is already registered.'**
+  String get usernameTextFieldAlreadyRegisteredErrorMessage;
+
+  /// No description provided for @passwordTextFieldEmptyErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Your password can\'t be empty.'**
+  String get passwordTextFieldEmptyErrorMessage;
+
+  /// No description provided for @passwordTextFieldInvalidErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least five characters long.'**
+  String get passwordTextFieldInvalidErrorMessage;
 }
 
 class _SignInLocalizationsDelegate extends LocalizationsDelegate<SignInLocalizations> {

@@ -19,6 +19,8 @@ dependencies:
     path: ../../user_repository
   component_library:
     path: ../../component_library
+  domain_models:
+    path: ../../domain_models
 
 dev_dependencies:
   flutter_test:
